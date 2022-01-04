@@ -48,7 +48,7 @@ class Main {
 
     System.out.println();
 
-    String[] candy = new String[5];
+   /* String[] candy = new String[5];
     Scanner it = new Scanner(System.in);
     int index = 0;
     while(index<candy.length)
@@ -58,6 +58,86 @@ class Main {
       System.out.println("candy[" + index + "] = " + candy[index]);
       index++;
     }
+*/
+
+//Lesson 2 - Searching
+int look=12;
+int indexWhere=-1;
+for(int index =0; index<nums.length;index++)
+{
+  if(nums[index]==look)
+  {
+    indexWhere=index;
+    break;
+  }
+}
+if(indexWhere!=-1)
+{
+  System.out.println("Look has been found at " +indexWhere);
+}
+else
+{
+System.out.println("Look has not been found");
+}
+
+//Searching for a String
+
+//String [] words={"Have","a","nice","day"};
+String words[] ={"Have","a","nice","day"};
+int indexWhere2=-1;
+for(int index =0; index<words.length;index++)
+{
+  if(words[index].equals("nice"))
+  {
+    indexWhere2=index;
+    break;
+  }
+}
+if(indexWhere2!=-1)
+{
+  System.out.println("Look has been found at " +indexWhere2);
+}
+else
+{
+System.out.println("Look has not been found");
+}
+
+//Count Values in an array
+int evens=0;
+int odds=0;
+for(int index =0; index<nums.length;index++)
+{
+  if(nums[index]%2==0)
+  {
+    evens++;
+  }
+  else
+  {
+    odds++;
+  }
+}
+System.out.println("Evens = "+evens+" "+"Odds = "+odds);
+
+//set flag if word has more than 4 letters
+boolean flag =false;
+for(int index =0; index<words.length;index++)
+{
+  if(words[index].length()>=4)
+  {
+    flag=true;
+    break;
+  }
+}
+System.out.println("Were there any words with more than 4 letters? " +flag);
+
+String words2[]= {"apple","banana","peach","cherries","blueberries"};
+for(int i=0;i<words2.length;i++)
+{
+  String first = words2[i].substring(0,1);
+  String last=words2[i].substring(words2[i].length()-1);
+  System.out.println("Index Value "+i+": "+words2[i]+" "+first+" "+last);
+
+}
 
   }
 }
