@@ -139,5 +139,28 @@ for(int i=0;i<words2.length;i++)
 
 }
 
+
+int[] list={12,65,80,70,34,22};
+
+for(int i=list.length-1;i>3;i--)
+{
+  list[i]=list[i-1];
+}
+list[3]=99;
+for(int i=0;i<list.length;i++)
+{
+  System.out.println(list[i]+ " ");
+}
+for(int i=2;i<list.length-1;i++)
+{
+  list[i]=list[i+1];
+}
+System.out.println();
+for(int i=0;i<list.length;i++)
+{
+  System.out.println(list[i]+ " ");
+}
+
+
   }
 }
