@@ -24,13 +24,13 @@ class Main {
     System.out.println();
 
     //use array elements in a calculation
-    int sum = nums[0]+ nums[1];
+    /*int sum = nums[0]+ nums[1];
     System.out.println("sum = " + sum);
     nums[5] = nums[5]*2;
     System.out.println("nums[5] = "+ nums[5]);
 
     System.out.println();
-
+*/
     for(int i = 0; i<nums.length; i++)
     {
       nums[i] = nums[i] / 5; //take current value and divide by 5, restore in location
@@ -131,6 +131,21 @@ for(int index =0; index<words.length;index++)
 System.out.println("Were there any words with more than 4 letters? " +flag);
 
 String words2[]= {"apple","banana","peach","cherries","blueberries"};
+
+//For-each
+for(String fruit:words2)
+{
+  System.out.println(fruit);
+}
+//for-each - print only fruits with length 5
+for(String fruit:words2)
+{
+  if(fruit.length()==5)
+  {
+  System.out.println(fruit);
+  }
+}
+
 for(int i=0;i<words2.length;i++)
 {
   String first = words2[i].substring(0,1);
@@ -141,7 +156,13 @@ for(int i=0;i<words2.length;i++)
 
 
 int[] list={12,65,80,70,34,22};
-
+int sum=0;
+for(int x:list)
+{
+  sum+=x;
+}
+System.out.println("The average of list is ");
+System.out.printf("%.2f%n",((double)sum/list.length));
 for(int i=list.length-1;i>3;i--)
 {
   list[i]=list[i-1];
@@ -160,7 +181,45 @@ for(int i=0;i<list.length;i++)
 {
   System.out.println(list[i]+ " ");
 }
+System.out.println();
 
 
+
+//Shift to the left
+/*int [] nums3={1,2,3,4};
+int temp=nums3[0];
+for(int i=0;i<nums3.0length-1;i++)
+{
+  nums3[i]=nums3[i+1];
+}
+nums3[nums3.length-1]=temp;
+for(int i=0;i<nums3.length;i++)
+{
+System.out.println(nums3[i]+" ");
+}
+
+//shift to the right
+System.out.println();
+int temp2=nums3[nums3.length-1];
+for(int i=nums3.length-1;i>0;i--)
+{
+  nums3[i]=nums3[i-1];
+}
+nums3[0]=temp2;
+/*
+for(int i=0;i<nums3.length;i++)
+{
+System.out.println(nums3[i]+" ");
+}
+
+//Reversing
+
+/*for(int=0;i<nums3.length/2;i++)
+{
+System.out.println();
+int j= nums3.length-i-1;
+int temp3=num3;
+}
+*/
   }
 }
